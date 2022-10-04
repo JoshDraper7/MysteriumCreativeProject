@@ -60,7 +60,7 @@
             <button id="new-cards-button" class="new-cards-button">New Cards</button>
             <button id="send-to-red" class="send-to-red">Send to Red</button>
             <div class="card_images">
-                <img id="image1" src="/photolab/images/Desert2.jpg" />
+                <img id="image1" src="/photolab/images/Desert2.jpg" onclick="image1Click()"/>
                 <img id="image2" src="/photolab/images/Desert2.jpg" />
                 <img id="image3" src="/photolab/images/Desert2.jpg" />
                 <img id="image4" src="/photolab/images/Desert2.jpg" />
@@ -68,19 +68,11 @@
                 <img id="image6" src="/photolab/images/Desert2.jpg" />
                 <img id="image7" src="/photolab/images/Desert2.jpg" />
             </div>
+             <div id="image-info"></div>
         </div>
-        <?php
-            if(isset($_POST['new-cards-button'])) {
-                echo "New cards was clicked";
-            }
-        ?>
-        <?php
-            $myfile = fopen("send-to-files/red.txt", "w") or die("Unable to open file!");
-            $txt = "John Doe\n";
-            fwrite($myfile, $txt);
-            $txt = "Jane Doe\n";
-            fwrite($myfile, $txt);
-            fclose($myfile);
-        ?>    
     </body>
+    <footer>
+        <p style="color:white;">Josh Draper and Coulson Rich</p>
+        <p><a style="color:white;" href="https://github.com/JoshDraper7/MysteriumCreativeProject.git">GitHub Repo</a></p>
+    </footer>
 </html>
