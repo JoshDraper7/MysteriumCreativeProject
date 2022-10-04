@@ -1,0 +1,74 @@
+* {
+    font-family: azonix;
+}
+
+.header {
+    background-image: url('/CreativeProject/images/foggy_forest.jpg') !important;
+}
+
+
+@font-face {
+    font-family: azonix;
+    src: url(Azonix.otf);
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.start-button p {
+    order: 0;
+    padding-top: 3px;
+    flex-grow: 2;
+    margin: 0px 0px 0px 0px;
+    align-self: center;
+    font-size: 48pt;
+}
+
+.start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit;
+    background: none;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    position: fixed;
+    top: 70%;
+
+}
+
+.-button p {
+    order: 0;
+    padding-top: 3px;
+    flex-grow: 2;
+    margin: 0px 0px 0px 0px;
+    align-self: center;
+}
+
+.fa {
+    order: 1;
+    align-self: center;
+    margin-left: 10px;
+    font-size: 100pt;
+}
+
+h1 {
+    color: white;
+}
+footer {
+    margin-left: 10px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+}
+
+
+

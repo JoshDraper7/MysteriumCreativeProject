@@ -1,0 +1,52 @@
+.nav-item {
+    border-bottom: 1px solid rgba(0,0,0,.9);
+    font-family: serif;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 960px) {
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+}
+
+.active {
+    border-color: white;
+}
+
+.bg-light {
+    background-color: #8d715b !important;
+}
+
+.home {
+    color: #FFA500 !important;
+}
+
+.clue_giver {
+    color: #023020 !important;
+}
+.red_player {
+    color: #800000 !important;
+}
+
+.purple_player {
+    color: #301934 !important;
+}
+
+.white_player {
+    color: #E1D9D1 !important;
+}
+
+.black_player {
+    color: black !important;
+}
+
+.blue_player {
+    color: #00008B !important;
+}
+
+.yellow_player {
+    color: yellow !important;
+}
+
+    
