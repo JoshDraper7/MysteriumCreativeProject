@@ -1,11 +1,114 @@
 window.onload = function() {
+    const SUPABASE_URL = 'https://pljtblzlnmgdlqohcjfv.supabase.co'
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsanRibHpsbm1nZGxxb2hjamZ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjQ5ODYxODUsImV4cCI6MTk4MDU2MjE4NX0.GgUAEWmWNr6d2SOBg0wyzKg_yCJwtMJ6YMTAZ8Rrrug'
+    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+    async function loadData() {
+        const { data, error } = await _supabase
+                .from('Player')
+                .select('img_url')
+            //     .insert([
+            //     { img_url: 'THis is a freaking test', player_type: 'blue'}
+            // ])
+    
+        console.log(data)
+        console.log(error)
+    }
+    async function sendData(url, player) {
+        const { data, error } = await _supabase
+                .from('Player')
+                .insert([
+                { img_url: url, player_type: player}
+            ])
+    
+        console.log(data)
+        console.log(error)
+    }
+    loadData();
+    
+    let currSelected = "NONE";
+    
+    document.getElementById("image7").addEventListener("click", async function(event) {
+        currSelected = "image7";
+        console.log(currSelected);
+    })
+    
+    document.getElementById("send-to-yellow").addEventListener("click", async function(event) {
+        if (currSelected === "NONE") {
+            return;
+        }
+        sendData(document.getElementById(currSelected).src, "yellow");
+    })
+    document.getElementById("image6").addEventListener("click", async function(event) {
+        currSelected = "image6";
+        console.log(currSelected);
+    })
+    
+    document.getElementById("send-to-blue").addEventListener("click", async function(event) {
+        if (currSelected === "NONE") {
+            return;
+        }
+        sendData(document.getElementById(currSelected).src, "blue");
+    })
+    document.getElementById("image5").addEventListener("click", async function(event) {
+        currSelected = "image5";
+        console.log(currSelected);
+    })
+    
+    document.getElementById("send-to-black").addEventListener("click", async function(event) {
+        if (currSelected === "NONE") {
+            return;
+        }
+        sendData(document.getElementById(currSelected).src, "black");
+    })
+    document.getElementById("image4").addEventListener("click", async function(event) {
+        currSelected = "image4";
+        console.log(currSelected);
+    })
+    
+    document.getElementById("send-to-white").addEventListener("click", async function(event) {
+        if (currSelected === "NONE") {
+            return;
+        }
+        sendData(document.getElementById(currSelected).src, "white");
+    })
+    document.getElementById("image3").addEventListener("click", async function(event) {
+        currSelected = "image3";
+        console.log(currSelected);
+    })
+    
+    document.getElementById("send-to-purple").addEventListener("click", async function(event) {
+        if (currSelected === "NONE") {
+            return;
+        }
+        sendData(document.getElementById(currSelected).src, "purple");
+    })
+    document.getElementById("image2").addEventListener("click", async function(event) {
+        currSelected = "image2";
+        console.log(currSelected);
+    })
+    
+    document.getElementById("send-to-red").addEventListener("click", async function(event) {
+        if (currSelected === "NONE") {
+            return;
+        }
+        sendData(document.getElementById(currSelected).src, "red");
+    })
+    document.getElementById("image1").addEventListener("click", async function(event) {
+        currSelected = "image1";
+        console.log(currSelected);
+    })
+    
     document.getElementById("new-cards-button").addEventListener("click", async function(event) {
-    let html = "";
-    document.getElementById("image-info").innerHTML = html;
-        for (let i = 1; i <= 7; i++) {
+        let html = "";
+        document.getElementById("image-info").innerHTML = html;
+        for (let i = 1; i <= 1; i++) {
             let words = "";
             let val = await getWord(words);
-            words += val[0].definition.split(" ")[0];
+            let rand = 999999;
+            while (rand > val[0].definition.split(" ").length) {
+                rand = Math.floor(Math.random() * (val[0].definition.split(" ").length - 2));
+            }
+            words += val[0].definition.split(" ")[rand];
             let val2 = await getImage(words);
             if (val2.photos.length === 0) {
                 i--;
@@ -36,7 +139,7 @@ async function getImage(words) {
     let page_num=1;
     let query=words;
     let search=false;
-    return fetch(`https://api.pexels.com/v1/search?query=${query}&page=${page_num}&per_page=${1}`, 
+    return fetch(`https://api.pexels.com/v1/search?query=${query}&page=${page_num}&per_page=${1}&size=medium`, 
     {
         method: "GET",
         headers: {
