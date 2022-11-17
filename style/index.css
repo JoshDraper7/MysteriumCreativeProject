@@ -3,9 +3,11 @@
 }
 
 .header {
-    background-image: url('/CreativeProject/images/foggy_forest.jpg') !important;
-}
+    margin-top: 17vw;
+    background-image: url('../images/sunset_basket.jpg') !important;
 
+
+}
 
 @font-face {
     font-family: azonix;
@@ -35,11 +37,11 @@
     align-items: center;
     width: fit;
     background: none;
-    color: #fff;
-    border: 3px solid #fff;
+    color: black;
+    border: 3px solid black;
     border-radius: 10px;
     position: fixed;
-    top: 70%;
+    margin-top: 160px;
 
 }
 
@@ -59,11 +61,11 @@
 }
 
 h1 {
-    color: white;
+    color: black;
 }
 footer {
     margin-left: 10px;
-    color: white;
+    color: black;
     position: absolute;
     bottom: 0;
     width: 100%;

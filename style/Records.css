@@ -1,10 +1,14 @@
+* {
+    font-family: azonix;
+}
 .body {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-    justify-content: center;
     align-items: center;
+    height: 100vh;
 }
+
 
 .card_images {
     display: flex;
@@ -24,10 +28,8 @@
 }
 
 .header {
-    background-image: url('/CreativeProject/images/foggy_forest.jpg') !important;
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center;
+    background-image: url('../images/sunset_basket.jpg') !important;
+    
 }
 
 img {
@@ -45,12 +47,9 @@ img {
     margin: 25px 0px 0px 0px;
 }
 
-.player_header h1 {
-    color: #E1D9D1 !important
-}
-
 img:hover{
     transform: scale(1.05);
     border: 2px solid white;
     border-color: white;
 }
+

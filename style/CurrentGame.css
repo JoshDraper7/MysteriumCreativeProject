@@ -1,8 +1,14 @@
+* {
+    font-family: azonix;
+}
 .body {
+    height: 100vh;
+}
+
+.body-inner {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-    justify-content: center;
     align-items: center;
 }
 
@@ -35,16 +41,23 @@ img:hover{
 }
 
 .header {
-    background-image: url('/CreativeProject/images/foggy_forest.jpg') !important;
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center;
+    background-image: url('../images/sunset_basket.jpg') !important;
+
 }
 
 img {
     margin: 0px 0px 5px 5px;
 }
 
-p, h2 {
+p {
     color: white;
+}
+
+.image {
+    object-fit: contain;
+    width: 0px;
+}
+
+td, th {
+    padding: 10px;
 }

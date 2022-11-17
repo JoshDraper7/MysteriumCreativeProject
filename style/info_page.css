@@ -2,9 +2,6 @@
     font-family: azonix;
 }
 
-.header {
-    background-image: url('/CreativeProject/images/foggy_forest.jpg') !important;
-}
 
 @font-face {
     font-family: azonix;
@@ -32,5 +29,5 @@
 }
 
 body {
-    background-color: #1593b9;
+    background-image: url('../images/sunset_basket.jpg') !important;
 }
